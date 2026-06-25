@@ -23,14 +23,15 @@ int main(int argc, char **argv)
 		std::cerr << "Error: try with './btc filename'" << std::endl;
 		return (1);
 	}
-	std::ifstream infile(argv[1]);
-	if (!infile.is_open())
+	try
 	{
-		std::cerr << "Error: could not open the file: " << argv[1] << std::endl;
-		return (1);
+		Bitcoin test;
+		//test.open_infile(argv); 
 	}
-	Bitcoin test;
-	//fill_the_data(infile);
+	catch (std::exception &e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
 	return (0);
 }
 
@@ -39,3 +40,4 @@ int main(int argc, char **argv)
 // je dois avoir un check pour le format de la map yyyy-mm-dd
 // je dois avoir un check pour les valeurs du birtcoin, elles doivent etre en float ou en int et doivent etre entre 0 et 1000 sinon c'est faux
 // je sais pas si je dois checker avant de remplir ou bien remplir et ensuite checker donc peut etre plus simple, ou bien checker en remplissant (je pense checker en remplissant)
+// je dois checker si le format du file est bien : date | value
