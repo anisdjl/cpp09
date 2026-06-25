@@ -26,7 +26,7 @@ int main(int argc, char **argv)
 	try
 	{
 		Bitcoin test;
-		//test.open_infile(argv); 
+		test.data_processing(argv);
 	}
 	catch (std::exception &e)
 	{

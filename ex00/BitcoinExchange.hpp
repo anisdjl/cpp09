@@ -12,7 +12,12 @@
 class Bitcoin
 {
 	private:
-		std::map<std::string, float> _bitcoin;
+		std::map<std::string, float>	_bitcoin;
+		float							_value;
+		std::string						_date;
+		int								_month;
+		int								_day;
+		int								_year;
 
 	public:
 		Bitcoin(void);
