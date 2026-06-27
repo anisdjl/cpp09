@@ -20,7 +20,9 @@ Rnp	&Rnp::operator=(const Rnp &src)
 {
 	if (this != &src)
 	{
-
+		_length = src._length;
+		_result = src._result;
+		_stack = src._stack;
 	}
 	return (*this);
 }
