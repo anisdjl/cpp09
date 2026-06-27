@@ -83,7 +83,7 @@ void	Rnp::calculate(std::string	input)
 			_stack.push(_result);
 		}
 	}
-	std::cout << _stack.top() << std::endl;
+	std::cout << std::fixed << std::setprecision(2) << _stack.top() << std::endl;
 }
 
 float	Rnp::op(int a, char oper, int b)
@@ -100,7 +100,7 @@ float	Rnp::op(int a, char oper, int b)
 		{
 			if (b == 0)
 				throw std::runtime_error("Error: division by 0 is impossible ");
-			return a / b;
+			return static_cast<float>(a) / static_cast<float>(b);
 			break;
 		}
 		case '*':

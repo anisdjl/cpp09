@@ -5,6 +5,7 @@
 #include <string>
 #include <algorithm>
 #include <stack>
+#include <iomanip>
 
 class Rnp
 {
