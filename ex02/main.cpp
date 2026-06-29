@@ -9,7 +9,8 @@ int main(int argc, char **argv)
 	}
 	try
 	{
-		check_input(argv, argc);
+		PmergeMe pm;
+		pm.check_input(argv, argc);
 	}
 	catch(const std::exception& e)
 	{

@@ -12,14 +12,18 @@
 class PmergeMe
 {
 	private:
-	
+		std::vector<int>	_vector;
+		std::deque<int>		_dqueue;
+
 	public:
 		PmergeMe(void);
 		~PmergeMe(void);
 		PmergeMe(const PmergeMe &src);
 		PmergeMe &operator=(const PmergeMe &src);
+		void	check_input(char **argv, int argc);
+		void	sort_algo_vect(void);
+		void	sort_algo_dq(void);
 };
 
-void	check_input(char **argv, int argc);
 
 #endif
