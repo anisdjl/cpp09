@@ -21,7 +21,7 @@ class PmergeMe
 		PmergeMe(const PmergeMe &src);
 		PmergeMe &operator=(const PmergeMe &src);
 		void	check_input(char **argv, int argc);
-		void	sort_algo_vect(void);
+		void	sort_algo_vect(int pairs_size);
 		void	sort_algo_dq(void);
 };
 
