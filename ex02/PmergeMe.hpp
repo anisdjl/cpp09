@@ -9,6 +9,18 @@
 #include <sstream>
 #include <climits>
 
+typedef struct s_block
+{
+	std::vector<int>	numbers;
+	int					great_elem;
+}	v_block;
+
+typedef struct s_struct
+{
+	std::deque<int>		numbers;
+	int					great_elem;
+}	dq_block;
+
 class PmergeMe
 {
 	private:
@@ -22,7 +34,9 @@ class PmergeMe
 		PmergeMe &operator=(const PmergeMe &src);
 		void	check_input(char **argv, int argc);
 		void	sort_algo_vect(int pairs_size);
-		void	sort_algo_dq(void);
+		void	sort_algo_dq(int pairs_size);
+		void	up_recur_vect(int pairs_size);
+		void	up_recur_dq(void);
 };
 
 

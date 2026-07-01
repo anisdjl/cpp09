@@ -11,7 +11,7 @@ int main(int argc, char **argv)
 	{
 		PmergeMe pm;
 		pm.check_input(argv, argc);
-		pm.sort_algo_vect(1);
+		// pm.sort_algo_vect(1);
 	}
 	catch(const std::exception& e)
 	{
